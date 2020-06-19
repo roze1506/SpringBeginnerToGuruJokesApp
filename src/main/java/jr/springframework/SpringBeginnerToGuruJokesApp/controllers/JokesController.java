@@ -19,6 +19,6 @@ public class JokesController {
     public String makeReaderLaugh(Model model) {
         final String joke = jokesService.makeMeLaugh();
         model.addAttribute("joke", joke);
-        return joke;
+        return "chucknorris";
     }
 }
