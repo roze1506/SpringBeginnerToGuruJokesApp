@@ -7,11 +7,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class JokesServiceImpl implements JokesService {
 
-    @Autowired
     private ChuckNorrisQuotes chuckNorrisQuotes;
 
+    public JokesServiceImpl() {
+        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    }
+
     @Override
-    public String letMeLaugh() {
+    public String makeMeLaugh() {
         return chuckNorrisQuotes.getRandomQuote();
     }
 }
